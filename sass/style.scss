@@ -1,4 +1,52 @@
-body * {
+* {
 	box-sizing: border-box;
+}
+
+body {
 	font-family: "Roboto", sans-serif;
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+}
+
+.container {
+	width: 440px;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	.panel {
+		height: 110px;
+		border: 1px solid white;
+		background-color: silver;
+		padding: 15px;
+
+		#number {
+			font-size: 2rem;
+			font-weight: bold;
+			background-color: transparent;
+			border: none;
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.item {
+			width: 110px;
+			height: 110px;
+			background-color: silver;
+			border: 1px solid white;
+			line-height: 110px;
+			text-align: center;
+			font-size: 1.5rem;
+
+			&:nth-last-child(1) {
+				flex-grow: 1;
+			}
+		}
+	}
 }
